@@ -1,0 +1,42 @@
+﻿@model UCP1_PAW_121_C.Models.Mobil
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mobil</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JenisMobil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JenisMobil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NamaMobil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaMobil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SewaMobil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SewaMobil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdMobil">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

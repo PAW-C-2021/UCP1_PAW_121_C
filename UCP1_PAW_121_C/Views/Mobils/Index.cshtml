@@ -1,0 +1,53 @@
+﻿@model IEnumerable<UCP1_PAW_121_C.Models.Mobil>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("JenisMobil")
+            </th>
+            <th>
+                @Html.DisplayName("Nama Mobil")
+            </th>
+            <th>
+                @Html.DisplayName("Sewa Mobil")
+            </th>
+            <th>
+                @Html.DisplayName("Status")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisMobil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamaMobil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SewaMobil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdMobil"><i class="fa fa-marker fa-lg"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdMobil"><i class="fas fa-list"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMobil"><i class="fa fa-trash-alt fa-lg"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
